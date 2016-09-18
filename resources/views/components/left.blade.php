@@ -44,14 +44,14 @@
 
 							<ul class="submenu">
 								<li>
-									<a href="/admin/classadd">
+									<a href="{{'admin/classadd'}}">
 										<i class="icon-double-angle-right"></i>
 										课程添加
 									</a>
 								</li>
 
 								<li>
-									<a href="/admin/classlist">
+									<a href="{{'admin/classlist'}}">
 										<i class="icon-double-angle-right"></i>
 										课程列表
 									</a>
@@ -70,14 +70,14 @@
 
 							<ul class="submenu">
 								<li>
-									<a href="/admin/schooladd">
+									<a href="{{'admin/schooladd'}}">
 										<i class="icon-double-angle-right"></i>
 										学校添加
 									</a>
 								</li>
 
 								<li>
-									<a href="/admin/schoollist">
+									<a href="{{'admin/schoollist'}}">
 										<i class="icon-double-angle-right"></i>
 										学校列表
 									</a>
@@ -95,14 +95,14 @@
 
 							<ul class="submenu">
 								<li>
-									<a href="/admin/bookadd">
+									<a href="{{'admin/bookadd'}}">
 										<i class="icon-double-angle-right"></i>
 										资料添加
 									</a>
 								</li>
 
 								<li>
-									<a href="/admin/booklist">
+									<a href="{{'admin/booklist'}}">
 										<i class="icon-double-angle-right"></i>
 										资料列表
 									</a>
