@@ -70,9 +70,6 @@
 
 							<ul class="submenu">
 								<li>
-
-									<a href="{{'admin/schooladd'}}">
-
 									<a href="{{'schooladd'}}">
 
 										<i class="icon-double-angle-right"></i>
@@ -81,9 +78,6 @@
 								</li>
 
 								<li>
-
-									<a href="{{'admin/schoollist'}}">
-
 									<a href="{{'schoollist'}}">
 										<i class="icon-double-angle-right"></i>
 										学校列表

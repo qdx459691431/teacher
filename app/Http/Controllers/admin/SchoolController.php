@@ -50,8 +50,8 @@ class SchoolController extends Controller
 			$savepath = base_path().'/public/images/';
 
 			$path = $photo->move($savepath,$newname);
-			$pathname="http://localhost/shixun1/teacher/public/";
-			$filepath = $pathname."images/".$newname;
+			// $pathname="http://localhost/shixun1/teacher/public/";
+			$filepath ="images/".$newname;
 			// $content=file_get_contents($filepath); 
 			// $content="0x".bin2hex($content);
 			$res=DB::table('school')->insert(['school_badge' => $filepath,'school_name' => $all['school_name'],'school_desc'=>$all['school_desc']]);
@@ -72,6 +72,7 @@ class SchoolController extends Controller
     	// $res= DB::table('school')->get();
     	// print_r($res);exit;
     	$res = DB::table('school')->paginate(3);
+
     	return view("admin/schoollist",['res'=>$res]);
     }
     /**
@@ -80,7 +81,7 @@ class SchoolController extends Controller
     public function schooldel()
     {
     	$id=Request::get("id");
-    	$res=DB::table('school')->where("school_id='$id'")->delete();
+    	$res=DB::table('school')->where("school_id",$id)->delete();
         if ($res) 
 		{
 			return redirect("schoollist");
@@ -96,7 +97,7 @@ class SchoolController extends Controller
     	$res = DB::table('school')->where("school_id",$id)->first();
     	// print_r($res);exit;
     	return view("admin/schoolupdate",['res'=>$res]);
-    }
+    }  
     public function schoolnewup()
     {
 
@@ -116,8 +117,8 @@ class SchoolController extends Controller
 		$savepath = base_path().'/public/images/';
 
 		$path = $photo->move($savepath,$newname);
-		$pathname="http://localhost/shixun1/teacher/public/";
-		$filepath = $pathname."images/".$newname;
+		
+		$filepath ="images/".$newname;
 		$res=DB::table('school')->where('school_id',$id)->update(['school_badge' => $filepath,'school_name' => $all['school_name'],'school_desc'=>$all['school_desc']]);
 		// print_r($res);exit;
 		if ($res) 
