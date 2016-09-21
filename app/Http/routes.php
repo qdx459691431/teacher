@@ -12,7 +12,10 @@
 */
 
 Route::get('/', 'admin\LoginController@index');
-
+Route::get('classadd', 'admin\CourseController@insert');
+Route::post('add', 'admin\CourseController@add');
+Route::get('classlist', 'admin\CourseController@show');
+Route::get('course_del', 'admin\CourseController@del');
 /*
 |--------------------------------------------------------------------------
 | Application Routes
