@@ -229,7 +229,8 @@
 								<img class="nav-user-photo" src="admin/assets/avatars/user.jpg" alt="Jason's Photo" />
 								<span class="user-info">
 									<small>欢迎光临,</small>
-									Jason
+									<?php session_start();
+									echo $_SESSION['aname']?>
 								</span>
 
 								<i class="icon-caret-down"></i>
@@ -253,7 +254,7 @@
 								<li class="divider"></li>
 
 								<li>
-									<a href="#">
+									<a href="{{'tuichu'}}">
 										<i class="icon-off"></i>
 										退出
 									</a>

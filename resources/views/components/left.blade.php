@@ -44,14 +44,14 @@
 
 							<ul class="submenu">
 								<li>
-									<a href="{{'admin/classadd'}}">
+									<a href="{{'classadd'}}">
 										<i class="icon-double-angle-right"></i>
 										课程添加
 									</a>
 								</li>
 
 								<li>
-									<a href="{{'admin/classlist'}}">
+									<a href="{{'classlist'}}">
 										<i class="icon-double-angle-right"></i>
 										课程列表
 									</a>
@@ -70,14 +70,14 @@
 
 							<ul class="submenu">
 								<li>
-									<a href="{{'admin/schooladd'}}">
+									<a href="{{'schooladd'}}">
 										<i class="icon-double-angle-right"></i>
 										学校添加
 									</a>
 								</li>
 
 								<li>
-									<a href="{{'admin/schoollist'}}">
+									<a href="{{'schoollist'}}">
 										<i class="icon-double-angle-right"></i>
 										学校列表
 									</a>
@@ -88,23 +88,23 @@
 						<li>
 							<a href="#" class="dropdown-toggle">
 								<i class="icon-list"></i>
-								<span class="menu-text"> 复习资料管理 </span>
+								<span class="menu-text"> 目录管理 </span>
 
 								<b class="arrow icon-angle-down"></b>
 							</a>
 
 							<ul class="submenu">
 								<li>
-									<a href="{{'admin/bookadd'}}">
+									<a href="{{'bookadd'}}">
 										<i class="icon-double-angle-right"></i>
-										资料添加
+										目录添加
 									</a>
 								</li>
 
 								<li>
-									<a href="{{'admin/booklist'}}">
+									<a href="{{'booklist'}}">
 										<i class="icon-double-angle-right"></i>
-										资料列表
+										目录列表
 									</a>
 								</li>
 							</ul>
