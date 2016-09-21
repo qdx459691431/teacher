@@ -11,8 +11,14 @@
 |
 */
 
-Route::get('/', 'admin\LoginController@index');
-
+Route::any('/', 'admin\LoginController@index');
+//后台学校路由
+Route::any('schooladd', 'admin\SchoolController@schooladd');
+Route::any('schooladds', 'admin\SchoolController@schooladds');
+Route::any('schoollist', 'admin\SchoolController@schoollist');
+Route::any('schooldel', 'admin\SchoolController@schooldel');
+Route::any('schoolupdate', 'admin\SchoolController@schoolupdate');
+Route::any('schoolnewup', 'admin\SchoolController@schoolnewup');
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -24,6 +30,6 @@ Route::get('/', 'admin\LoginController@index');
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
-    //
-});
+// Route::group(['middleware' => ['web']], function () {
+//     //
+// });
