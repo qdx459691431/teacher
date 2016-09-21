@@ -2,9 +2,9 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>登录页面 - Bootstrap后台管理系统模版Ace下载</title>
-		<meta name="keywords" content="Bootstrap模版,Bootstrap模版下载,Bootstrap教程,Bootstrap中文" />
-		<meta name="description" content="站长素材提供Bootstrap模版,Bootstrap教程,Bootstrap中文翻译等相关Bootstrap插件下载" />
+		<title>鍚庡彴鐧婚檰椤甸潰</title>
+		<meta name="keywords" content="Bootstrap脛拢掳忙,Bootstrap脛拢掳忙脧脗脭脴,Bootstrap陆脤鲁脤,Bootstrap脰脨脦脛" />
+		<meta name="description" content="脮戮鲁陇脣脴虏脛脤谩鹿漏Bootstrap脛拢掳忙,Bootstrap陆脤鲁脤,Bootstrap脰脨脦脛路颅脪毛碌脠脧脿鹿脴Bootstrap虏氓录镁脧脗脭脴" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<!-- basic styles -->
@@ -69,31 +69,33 @@
 
 											<div class="space-6"></div>
 
-											<form>
+											<form action="{{'log'}}" method='post'>
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="Username" />
+															<input type="text" class="form-control" name='name' placeholder="Username" />
 															<i class="icon-user"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Password" />
+															<input type="password" class="form-control" name='pwd' placeholder="Password" />
 															<i class="icon-lock"></i>
 														</span>
 													</label>
 
 													<div class="space"></div>
+													<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 
 													<div class="clearfix">
 														<label class="inline">
 															<input type="checkbox" class="ace" />
 															<span class="lbl"> Remember Me</span>
+
 														</label>
 
-														<button type="button" class="width-35 pull-right btn btn-sm btn-primary">
+														<button type="submit" class="width-35 pull-right btn btn-sm btn-primary">
 															<i class="icon-key"></i>
 															Login
 														</button>
@@ -192,32 +194,32 @@
 											<div class="space-6"></div>
 											<p> Enter your details to begin: </p>
 
-											<form>
+											<form action="{{'zhuce'}}" method='post'>
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="email" class="form-control" placeholder="Email" />
+															<input type="email" class="form-control" name='email'  placeholder="Email" />
 															<i class="icon-envelope"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="Username" />
+															<input type="text" class="form-control" name='name'placeholder="Username" />
 															<i class="icon-user"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Password" />
+															<input type="password" class="form-control" name='pwd' placeholder="Password" />
 															<i class="icon-lock"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Repeat password" />
+															<input type="password" class="form-control" name='pwd1' placeholder="Repeat password" />
 															<i class="icon-retweet"></i>
 														</span>
 													</label>
@@ -231,17 +233,12 @@
 													</label>
 
 													<div class="space-24"></div>
+													<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 
 													<div class="clearfix">
-														<button type="reset" class="width-30 pull-left btn btn-sm">
-															<i class="icon-refresh"></i>
-															Reset
-														</button>
-
-														<button type="button" class="width-65 pull-right btn btn-sm btn-success">
-															Register
-															<i class="icon-arrow-right icon-on-right"></i>
-														</button>
+														
+														<input type="reset" value='Reset' class="width-30 pull-left btn btn-sm">
+														<input type="submit" value='Register' class="width-65 pull-right btn btn-sm btn-success">
 													</div>
 												</fieldset>
 											</form>

@@ -11,6 +11,24 @@
 |
 */
 
+/*
+       后台登陆注册
+*/
+Route::get('/', 'admin\LoginController@index');
+Route::post('log', 'admin\LoginController@info');
+Route::get('demo', 'admin\LoginController@login');
+Route::get('tuichu', 'admin\LoginController@logout');
+Route::post('zhuce', 'admin\LoginController@add');
+
+/*
+       科目管理
+*/
+ Route::get('bookadd', 'admin\SubjectController@adds');
+
+ Route::get('regs', 'admin\SubjectController@cha');
+
+
+
 Route::any('/', 'admin\LoginController@index');
 //后台学校路由
 Route::any('schooladd', 'admin\SchoolController@schooladd');
@@ -19,6 +37,13 @@ Route::any('schoollist', 'admin\SchoolController@schoollist');
 Route::any('schooldel', 'admin\SchoolController@schooldel');
 Route::any('schoolupdate', 'admin\SchoolController@schoolupdate');
 Route::any('schoolnewup', 'admin\SchoolController@schoolnewup');
+
+Route::get('/', 'admin\LoginController@index');
+Route::get('classadd', 'admin\CourseController@insert');
+Route::post('add', 'admin\CourseController@add');
+Route::get('classlist', 'admin\CourseController@show');
+Route::get('course_del', 'admin\CourseController@del');
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
