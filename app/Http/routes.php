@@ -11,6 +11,7 @@
 |
 */
 
+<<<<<<< HEAD
 Route::any('/', 'admin\LoginController@index');
 //后台学校路由
 Route::any('schooladd', 'admin\SchoolController@schooladd');
@@ -19,6 +20,13 @@ Route::any('schoollist', 'admin\SchoolController@schoollist');
 Route::any('schooldel', 'admin\SchoolController@schooldel');
 Route::any('schoolupdate', 'admin\SchoolController@schoolupdate');
 Route::any('schoolnewup', 'admin\SchoolController@schoolnewup');
+=======
+Route::get('/', 'admin\LoginController@index');
+Route::get('classadd', 'admin\CourseController@insert');
+Route::post('add', 'admin\CourseController@add');
+Route::get('classlist', 'admin\CourseController@show');
+Route::get('course_del', 'admin\CourseController@del');
+>>>>>>> dev
 /*
 |--------------------------------------------------------------------------
 | Application Routes

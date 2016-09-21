@@ -36,7 +36,7 @@
 					<ul class="nav nav-list">
 						<li>
 							<a href="#" class="dropdown-toggle">
-								<i class="icon-desktop"></i>
+								<i class="icon-list"></i>
 								<span class="menu-text"> 课程管理 </span>
 
 								<b class="arrow icon-angle-down"></b>
@@ -44,14 +44,14 @@
 
 							<ul class="submenu">
 								<li>
-									<a href="{{'admin/classadd'}}">
+									<a href="{{'classadd'}}">
 										<i class="icon-double-angle-right"></i>
 										课程添加
 									</a>
 								</li>
 
 								<li>
-									<a href="{{'admin/classlist'}}">
+									<a href="{{'classlist'}}">
 										<i class="icon-double-angle-right"></i>
 										课程列表
 									</a>
@@ -71,7 +71,11 @@
 							<ul class="submenu">
 								<li>
 
+
 									<a href="{{'admin/schooladd'}}">
+
+									<a href="{{'schooladd'}}">
+
 
 									<a href="{{'schooladd'}}">
 
@@ -82,7 +86,10 @@
 
 								<li>
 
+
 									<a href="{{'admin/schoollist'}}">
+
+
 
 									<a href="{{'schoollist'}}">
 										<i class="icon-double-angle-right"></i>
@@ -102,14 +109,14 @@
 
 							<ul class="submenu">
 								<li>
-									<a href="{{'admin/bookadd'}}">
+									<a href="{{'bookadd'}}">
 										<i class="icon-double-angle-right"></i>
 										资料添加
 									</a>
 								</li>
 
 								<li>
-									<a href="{{'admin/booklist'}}">
+									<a href="{{'booklist'}}">
 										<i class="icon-double-angle-right"></i>
 										资料列表
 									</a>
