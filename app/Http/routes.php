@@ -10,6 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+
 /*
        后台登陆注册
 */
@@ -26,6 +27,23 @@ Route::post('zhuce', 'admin\LoginController@add');
 
  Route::get('regs', 'admin\SubjectController@cha');
 
+
+
+Route::any('/', 'admin\LoginController@index');
+//后台学校路由
+Route::any('schooladd', 'admin\SchoolController@schooladd');
+Route::any('schooladds', 'admin\SchoolController@schooladds');
+Route::any('schoollist', 'admin\SchoolController@schoollist');
+Route::any('schooldel', 'admin\SchoolController@schooldel');
+Route::any('schoolupdate', 'admin\SchoolController@schoolupdate');
+Route::any('schoolnewup', 'admin\SchoolController@schoolnewup');
+
+Route::get('/', 'admin\LoginController@index');
+Route::get('classadd', 'admin\CourseController@insert');
+Route::post('add', 'admin\CourseController@add');
+Route::get('classlist', 'admin\CourseController@show');
+Route::get('course_del', 'admin\CourseController@del');
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -37,6 +55,6 @@ Route::post('zhuce', 'admin\LoginController@add');
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
-    //
-});
+// Route::group(['middleware' => ['web']], function () {
+//     //
+// });

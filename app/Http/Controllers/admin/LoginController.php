@@ -53,6 +53,7 @@ class LoginController extends BaseController
     	}else{
     		echo "<script>alert('密码不一致');history.go(-1);</script>";
     	}
-    	
-    }
+
+
+}
 }
