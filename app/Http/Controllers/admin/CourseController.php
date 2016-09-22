@@ -62,16 +62,9 @@ class CourseController extends BaseController
      */
     public function del(Request $request){
         $course_id=$request->get("course_id");
-        $re=DB::table("list")->where("course_id","=","$course_id")->where("pid","=","0")->select("list.list_id")->get();
-        print_r($re);
-        die;
         $res=DB::table("course")->where("course_id","=","$course_id")->delete();
         if($res){
-            $re=DB::table("list")->where("course_id","=","$course_id")->where("pid","=","0")->select("list.list_id")->get();
-
-            if($re){
-                echo "删除成功";
-            }
+            echo "<script>alert('删除成功');.href=''</script>";
         }else{
             echo "删除失败";
         }
