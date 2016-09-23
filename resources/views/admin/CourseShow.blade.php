@@ -156,18 +156,18 @@
                                                     <div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
 
 
-                                                        <button class="btn btn-xs btn-info">
+                                                       {{-- <button class="btn btn-xs btn-info">
                                                             <i class="icon-edit bigger-120"></i>
-                                                        </button>
+                                                        </button>--}}
 
                                                         <a class="btn btn-xs btn-danger" href="course_del?course_id=<?php echo $v['course_id']?>">
                                                                 <i class="icon-trash bigger-120"></i>
                                                         </a>
 
 
-                                                        <button class="btn btn-xs btn-warning">
+                                                        {{--<button class="btn btn-xs btn-warning">
                                                             <i class="icon-eye-open bigger-120"></i>
-                                                        </button>
+                                                        </button>--}}
                                                     </div>
 
                                                     <div class="visible-xs visible-sm hidden-md hidden-lg">
@@ -209,45 +209,7 @@
                                         @endforeach
                                         </tbody>
                                     </table>
-                                    {{--分页--}}
-                               {{--     <div>
-                                        <ul class="pagination">
-                                            <li class="disabled">
-                                                <a href="#">
-                                                    <i class="icon-double-angle-left"></i>
-                                                </a>
-                                            </li>
-
-                                            <li class="active">
-                                                <a href="#">1</a>
-                                            </li>
-
-                                            <li>
-                                                <a href="#">2</a>
-                                            </li>
-
-                                            <li>
-                                                <a href="#">3</a>
-                                            </li>
-
-                                            <li>
-                                                <a href="#">4</a>
-                                            </li>
-
-                                            <li>
-                                                <a href="#">5</a>
-                                            </li>
-
-                                            <li>
-                                                <a href="#">
-                                                    <i class="icon-double-angle-right"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>--}}
-                                </div><!-- /.table-responsive -->
-                            </div><!-- /span -->
-                        </div><!-- /row -->
+                                    <?php echo $data->render(); ?>
 
                         <div class="hr hr-18 dotted hr-double"></div>
 

@@ -54,7 +54,7 @@
 </head>
 
 <body>
-        @include('components.head')
+@include('components.head')
 
 <div class="main-container" id="main-container">
     <script type="text/javascript">
@@ -77,13 +77,13 @@
                 <ul class="breadcrumb">
                     <li>
                         <i class="icon-home home-icon"></i>
-                        <a href="#">主页</a>
+                        <a href="demo">主页</a>
                     </li>
 
                     <li>
                         <a href="#">课程管理</a>
                     </li>
-                    <li class="active">课程添加</li>
+                    <li class="active">科目添加</li>
                 </ul><!-- .breadcrumb -->
 
                 <div class="nav-search" id="nav-search">
@@ -102,7 +102,7 @@
                         课程管理
                         <small>
                             <i class="icon-double-angle-right"></i>
-                           课程添加
+                            科目添加
                         </small>
                     </h1>
                 </div><!-- /.page-header -->
@@ -111,67 +111,23 @@
                     <div class="col-xs-12">
                         <!-- PAGE CONTENT BEGINS -->
 
-                        <form class="form-horizontal" role="form" action="add" method="post" enctype="multipart/form-data">
+                        <form class="form-horizontal" role="form" action="type_add" method="post" enctype="multipart/form-data">
                             <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 课程名称 </label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 科目名称 </label>
 
                                 <div class="col-sm-9">
-                                    <input type="text" id="form-field-1" placeholder="请输入课程名称" class="col-xs-10 col-sm-5" name="course_name" />
+                                    <input type="text" id="form-field-1" placeholder="请输入课程科目" class="col-xs-10 col-sm-5" name="type_name" />
                                 </div>
                             </div>
 
                             <div class="space-4"></div>
-
-
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right">授课时间</label>
-
-                                <div class="col-sm-9">
-											<span class="input-icon">
-												<input type="text" id="form-field-icon-1" name="course_time" />
-												<span>课时</span>
-											</span>
-                                </div>
-                            </div>
-
-                            <div class="space-4"></div>
-
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-input-readonly"> 课程介绍 </label>
-
-                                <div class="col-sm-9">
-                                    <textarea class="col-xs-8" id="form-field-3" placeholder="请输入课程介绍" name="course_desc" ></textarea>
-                                </div>
-                            </div>
-
-                            <div class="space-4"></div>
-
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-4">上传图片  </label>
-
-                                <div class="col-sm-9">
-                                    <input type="file" class="col-xs-10 col-sm-5" name="file" />
-
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-5">课程概述</label>
-
-                                <div class="col-sm-9">
-                                    <div class="clearfix">
-                                        <textarea class="col-xs-8" id="form-field-4" placeholder="请输入课程概述" name="course_content" ></textarea>
-                                    </div>
-                                </div>
-                            </div>
-
 
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-6">学校名称</label>
 
                                 <div class="col-sm-7">
-                                    <select class="form-control" id="form-field-select-1" name="school_id"  onchange="change(this.value)" >
+                                    <select class="form-control" id="form-field-select-1" name="school_id" >
                                         <option value="">&nbsp;请选择学校</option>
                                         @foreach($school as  $k=>$v)
                                             <option value="<?php echo $v['school_id']?>">{{$v['school_name']}}</option>
@@ -180,31 +136,11 @@
                                 </div>
 
                             </div>
-
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-6">课程类型</label>
-
-                                <div class="col-sm-7">
-                                    <select class="form-control" id="b" name="type_id" >
-                                        <option value="">&nbsp;请先选择学校</option>
-                                    </select>
-                                </div>
-
-                            </div>
-
-
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-6">任课教师</label>
-                                <div class="col-sm-9">
-                                    <input type="text" id="form-field-1" placeholder="请输入任课教师姓名" class="col-xs-10 col-sm-5" name="teacher_name" />
-                                </div>
-                            </div>
-
                             <div class="clearfix form-actions">
                                 <div class="col-md-offset-3 col-md-9">
                                     <button class="btn btn-info" type="submit">
                                         <i class="icon-ok bigger-110"></i>
-                                        提交
+                                        添加
                                     </button>
 
                                     &nbsp; &nbsp; &nbsp;
@@ -316,31 +252,13 @@
 <script src="admin/assets/js/jquery.inputlimiter.1.3.1.min.js"></script>
 <script src="admin/assets/js/jquery.maskedinput.min.js"></script>
 <script src="admin/assets/js/bootstrap-tag.min.js"></script>
-<script src="admin/assets/jquery/jquery.js"></script>
 
 <!-- ace scripts -->
 
 <script src="admin/assets/js/ace-elements.min.js"></script>
 <script src="admin/assets/js/ace.min.js"></script>
 
-<!-- inline scripts related to this page -->
-<script>
-    function change(v){
-        $.ajax({
-            url:"courseadd",
-            type:"GET",
-            data:{school_id:v},
-            dataType:"json",
-            success:function(e){
-               var str="<option value=''>&nbsp;请选择课程类型</option>";
-                for(i in e){
-                    str+="<option value="+e[i].type_id+">"+e[i].type_name+"</option>";
-                }
-                $("#b").html(str);
-            }
-        })
-    }
-</script>
+
 <script type="text/javascript">
     jQuery(function($) {
         $('#id-disable-check').on('click', function() {
