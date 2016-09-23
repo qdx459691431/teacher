@@ -21,13 +21,15 @@ Route::get('tuichu', 'admin\LoginController@logout');
 Route::post('zhuce', 'admin\LoginController@add');
 
 /*
-       科目管理
+       目录管理
 */
  Route::get('bookadd', 'admin\SubjectController@adds');
-
  Route::get('regs', 'admin\SubjectController@cha');
-
-
+ Route::post('jia', 'admin\SubjectController@jias');
+ Route::get('booklist', 'admin\SubjectController@lists');
+Route::get('bookdel', 'admin\SubjectController@del');
+Route::get('dataadd', 'admin\SubjectController@tian');
+Route::post('ad', 'admin\SubjectController@ads');
 
 //后台学校路由
 Route::any('schooladd', 'admin\SchoolController@schooladd');

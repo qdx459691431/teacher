@@ -100,10 +100,10 @@
 					<div class="page-content">
 						<div class="page-header">
 							<h1>
-								科目管理
+								目录管理
 								<small>
 									<i class="icon-double-angle-right"></i>
-									科目添加
+									目录添加
 								</small>
 							</h1>
 						</div><!-- /.page-header -->
@@ -112,7 +112,7 @@
 							<div class="col-xs-12">
 								<!-- PAGE CONTENT BEGINS -->
 
-								<form class="form-horizontal" role="form">
+								<form class="form-horizontal" role="form" action="jia" method='post'>
 									<div class="form-group">
 										<label class="col-sm-3 control-label no-padding-right" for="form-field-1">课程名称</label>
 
@@ -123,6 +123,7 @@
 													<option value="<?php echo $a['course_id']; ?>" >
 														{{$a['course_name']}}
 													</option>
+													
 												@endforeach
 											</select>
 										</div>
@@ -134,9 +135,7 @@
 										<label class="col-sm-3 control-label no-padding-right" for="form-field-1">父级目录</label>
 
 										<div class="col-sm-9">
-											<select name="pid" class="col-xs-10 col-sm-5">
-												<option value="0">请选择</option>
-												
+											<select name="pid" class="col-xs-10 col-sm-5" id='b'>	
 											</select>
 										</div>
 									</div>
@@ -151,6 +150,7 @@
 										
 										</div>
 									</div>
+									<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 
 									<div class="space-4"></div>
 										<div class="col-md-offset-3 col-md-9">
@@ -519,7 +519,16 @@
 			type:"GET",
 			data:{id:e},
 			success:function(msg){
-				alert(msg);
+			 var dataObj=eval("("+msg+")");//转换为json对象 
+			 var list=dataObj.list;
+			var str="<option value='0'>&nbsp;请选择</option>";
+				for(i in list){
+					str+="<option value="+list[i].list_id+">"+list[i].list_name+"</option>";
+					for(a in list[i].son){
+						str+="<option value="+list[i].son[a].list_id+">&nbsp;&nbsp;&nbsp;"+list[i].son[a].list_name+"</option>";
+					}
+				}
+				$("#b").html(str);
 			}
 		})
 	}

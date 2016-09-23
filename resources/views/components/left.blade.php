@@ -77,7 +77,10 @@
 
 							<ul class="submenu">
 								<li>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8fcd5c8bfd34096a5af4e90c7cad7b4a66fe9c89
 									<a href="{{'schooladd'}}">
 
 										<i class="icon-double-angle-right"></i>
@@ -114,6 +117,12 @@
 									<a href="{{'booklist'}}">
 										<i class="icon-double-angle-right"></i>
 										目录列表
+									</a>
+								</li>
+								<li>
+									<a href="{{'dataadd'}}">
+										<i class="icon-double-angle-right"></i>
+										添加数据
 									</a>
 								</li>
 							</ul>

@@ -110,9 +110,9 @@ class CourseController extends BaseController
         $course_id=$request->get("course_id");
         $res=DB::table("course")->where("course_id","=","$course_id")->delete();
         if($res){
-            echo "<script>alert('删除成功');localhost.href='show'</script>";
+            return redirect("courselist");
         }else{
-            echo "<script>alert('删除失败');localhost.href='show'</script>";;
+            echo "<script>alert('删除失败');localhost.href='courselist'</script>";
         }
     }
 }
