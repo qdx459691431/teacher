@@ -29,7 +29,6 @@ Route::post('zhuce', 'admin\LoginController@add');
 
 
 
-Route::any('/', 'admin\LoginController@index');
 //后台学校路由
 Route::any('schooladd', 'admin\SchoolController@schooladd');
 Route::any('schooladds', 'admin\SchoolController@schooladds');
@@ -38,11 +37,12 @@ Route::any('schooldel', 'admin\SchoolController@schooldel');
 Route::any('schoolupdate', 'admin\SchoolController@schoolupdate');
 Route::any('schoolnewup', 'admin\SchoolController@schoolnewup');
 
-Route::get('/', 'admin\LoginController@index');
-Route::get('classadd', 'admin\CourseController@insert');
+Route::get('courseadd', 'admin\CourseController@insert');
 Route::post('add', 'admin\CourseController@add');
-Route::get('classlist', 'admin\CourseController@show');
+Route::get('courselist', 'admin\CourseController@show');
 Route::get('course_del', 'admin\CourseController@del');
+Route::get('coursetype', 'admin\CourseController@type');
+Route::post('type_add', 'admin\CourseController@type_add');
 
 /*
 |--------------------------------------------------------------------------

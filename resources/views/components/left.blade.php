@@ -44,14 +44,21 @@
 
 							<ul class="submenu">
 								<li>
-									<a href="{{'classadd'}}">
+									<a href="{{'courseadd'}}">
 										<i class="icon-double-angle-right"></i>
 										课程添加
 									</a>
 								</li>
 
+                                <li>
+                                    <a href="{{'coursetype'}}">
+                                        <i class="icon-double-angle-right"></i>
+                                        课程类型添加
+                                    </a>
+                                </li>
+
 								<li>
-									<a href="{{'classlist'}}">
+									<a href="{{'courselist'}}">
 										<i class="icon-double-angle-right"></i>
 										课程列表
 									</a>
@@ -71,14 +78,6 @@
 							<ul class="submenu">
 								<li>
 
-
-								
-
-
-
-
-
-
 									<a href="{{'schooladd'}}">
 
 										<i class="icon-double-angle-right"></i>
@@ -87,10 +86,6 @@
 								</li>
 
 								<li>
-
-
-
-
 									<a href="{{'schoollist'}}">
 										<i class="icon-double-angle-right"></i>
 										学校列表
