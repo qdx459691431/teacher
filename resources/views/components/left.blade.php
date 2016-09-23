@@ -70,15 +70,6 @@
 
 							<ul class="submenu">
 								<li>
-
-
-								
-
-
-
-
-
-
 									<a href="{{'schooladd'}}">
 
 										<i class="icon-double-angle-right"></i>
@@ -87,10 +78,6 @@
 								</li>
 
 								<li>
-
-
-
-
 									<a href="{{'schoollist'}}">
 										<i class="icon-double-angle-right"></i>
 										学校列表
@@ -119,6 +106,12 @@
 									<a href="{{'booklist'}}">
 										<i class="icon-double-angle-right"></i>
 										目录列表
+									</a>
+								</li>
+								<li>
+									<a href="{{'dataadd'}}">
+										<i class="icon-double-angle-right"></i>
+										添加数据
 									</a>
 								</li>
 							</ul>
