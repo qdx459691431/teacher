@@ -36,21 +36,31 @@ class SubjectController extends BaseController{
 		$pid=Request::input('pid');
 		$listname=Request::input('listname');
 		$courseid=Request::input('courseid');
-		//echo $pid,$listname,$courseid;
+		//echo $pid,$listname,$courseid;die;
+		
 		if($pid=='0'){
-			$arr=DB::table('list')->insert([
+			DB::table('list')->insert([
 			    ['list_name' =>$listname,
 			     'pid' => $pid,
 			     'course_id'=>$courseid]
 			]);
-			if($arr){
-				return Redirect::to("booklist");
-			}
+			return Redirect::to("booklist");
 		}else{
-			echo "<script>alert('请选择父级目录');location.href='bookadd';</script>";
+			$data=DB::Table('list')->where("list_id",$pid)->get();
+			if($data['0']['pid']=='0'){
+				$arr=DB::table('list')->insert([
+				    ['list_name' =>$listname,
+				     'pid' => $pid,
+				     'course_id'=>$courseid]
+				]);
+				if($arr){
+					return Redirect::to("booklist");
+				}
+			}else if($pid!='0'){
+				echo "<script>alert('请选择父级目录');location.href='bookadd';</script>";
+			}
+		
 		}
-		
-		
 	}
 	public function lists(){
 		$data=DB::Table('list')->get();
@@ -103,7 +113,7 @@ class SubjectController extends BaseController{
 			     'list_id' => $listid]
 			]);
 			if($arr){
-				return Redirect::to("demo");
+				return Redirect::to("tian");
 			}
 		}
     	}
